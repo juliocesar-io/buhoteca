@@ -2,11 +2,8 @@
 
 # Biblioteca v0.1 
 
-	Proyecto final para el curso de base de datos
+Proyecto final para el curso de base de datos
 
-### Diseño de la base de datos
-
-![Diseño db]()
 
 ### Requerimientos
 
@@ -19,8 +16,8 @@
 
 * Instalar librerias de Django::
 ```
-   $ pip install -r requirements.txt
- ```
+$ pip install -r requirements.txt
+```
 
 * Configurar el acceso al gestor de base de datos en o dejarlo como esta para usar SQLite
 ```
@@ -36,16 +33,18 @@
         	'PORT': '',
     	}	
 	}
-
- ```
-
-* Sinconizar la base de datos
 ```
-   $ python manage.py syncdb
+
+Sinconizar la base de datos
+
 ```
-* Ejecutar el servidor
+$ python manage.py syncdb
+```
+Ejecutar el servidor
+
 ```	
-   $ python mange.py runserver
+$ python mange.py runserver
+```
 
 ### Patrones de Django
 
@@ -56,7 +55,7 @@ Documentación oficial del framework -> https://docs.djangoproject.com/en/1.7/
 
 #### Los Modelos
 
- En el directorio libros se encuentran los modelos donde se definen asi:
+En el directorio libros se encuentran los modelos donde se definen asi:
 
 ```
 $ vim libros/models.py
@@ -67,7 +66,6 @@ $ vim libros/models.py
 
 		def __unicode__(self):
  			return self.titulo
-
 ```
 
 Luego al sincronizar la base de datos se genera un script que hace la rutina "CREATE TABLE" en SQL como todos sus atributos, a esto en Django se le llama ORM.
