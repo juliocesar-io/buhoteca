@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block contenido %}
+
+
+
+        <br>
+        <div class="large-8 columns">
+
+          <div class="row">
+           <h3>Últimos libros</h3>
+
+           {% for libro in libros %}
+            <div class="large-4 small-6 columns">
+              <img src="http://placehold.it/1000x1000&text=Thumbnail">
+ 
+              <div class="panel">
+                <h5> <strong>{{libro.titulo}} </strong></h5>
+                <h6 class="subheader"><em> {{libro.autor}}</em> </h6>
+                <a href="">Descargar</a>
+              </div>
+            </div>
+            {% empty %}
+             <p> Aún no hay libros registrados </p>
+          {% endfor %}
+        </div>
+      </div>
+{% endblock %}

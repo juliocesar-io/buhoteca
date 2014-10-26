@@ -1,0 +1,162 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Biblioteca </title>
+    <link rel="stylesheet" href="{{STATIC_URL}}css/foundation.css" />
+    <script src="{{STATIC_URL}}js/vendor/modernizr.js"></script>
+  </head>
+  <body>
+       <a href="https://github.com/uzi200/biblioteca-django"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+   <div class="row">
+    <div class="large-12 columns">   
+       <div class="row">
+        <div class="large-12 columns">
+
+          <nav class="top-bar" data-topbar>
+            <ul class="title-area">
+               
+              <li class="name">
+                <h1>
+                  <a href="/">
+                    Biblioteca v0.1
+                  </a>
+                </h1>
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            </ul>
+         
+            <section class="top-bar-section">
+
+              <ul class="left">
+
+                <li class="has-form"> 
+                  <div class="row collapse"> 
+                    <div class="large-8 small-9 columns">
+                     <input type="text" placeholder="Título o autor "> 
+                   </div> <div class="large-4 small-3 columns"> 
+                   <a href="#" style="background-color:#009cde"class="alert button expand">Buscar</a> 
+                 </div> 
+               </div> 
+             </li>
+
+              </ul>
+               
+              <ul class="right">
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                  <a href="#">Recursos</a>
+                  <ul class="dropdown">
+                    <li><label>Section Name</label></li>
+                    <li class="has-dropdown">
+                      <a href="#" class="">Categorias</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Ciencias basicas</a></li>
+                        <li><a href="#">Historia</a></li>
+                        <li><a href="#">Obras literarias</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Revistas</a></li>
+                    <li><a href="#">Papers</a></li>
+                    <li class="divider"></li>
+                    <li><label> Por facultades </label></li>
+                    <li><a href="#">Ingenieria de Sistemas</a></li>
+                    <li><a href="#">Derecho</a></li>
+                    <li><a href="#">Psicologia</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Ver todos →</a></li>
+                  </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a style="background-color:#F25E5C;"href="/libros/nuevo/">Agregar libro</a></li>
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                  <a href="#">Mi cuenta</a>
+                  <ul class="dropdown">
+                    <li><a href="#">Prestamos</a></li>
+                    <li><a href="#">Descargas</a></li>
+                    <li><a href="#">Perfil</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Salir</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+          </nav>
+          
+        </div>
+      </div>
+
+       <div class="row">
+        <div class="large-4 small-12 columns">
+ 
+          <img src="{{STATIC_URL}}img/logo.png">
+ 
+          <div  class="hide-for-small panel">
+            <h3>Sobre el proyecto</h3>
+            <h5 class="subheader"> Proyecto final para el curso de base de datos, esta idea se puede proyectar para impletarlo en la universidad, ya esta  no cuenta con un sistema de catalogo y prestamo eficiente para los recuros de la biblioteca.
+            </h5>
+            <br>
+            <p>_____________________________</p>
+            <p>Si se animan a contribuir pueden leer la documentación para que entiendan la estructura del proyecto (como funcionan los modelos, la base de datos diseño y conexión, las vistas, etc..), el repositorio esta disponible en Github. </p>
+              <a style="background-color:#7BAC0F" href="https://github.com/uzi200/biblioteca-django" class="button tiny">Repositorio</a>
+              <a href="/docs"class="button tiny">Documentación</a>
+          </div>
+ 
+          
+          <div class="panel callout radius">
+            <h4> Sobre mi </h4>
+              <strong> Julio César Castellanos </strong> <br>
+              +57 301 508 86 87 <br>
+              Mail - <a href="mailto:julioc@protonmail.ch"> julioc@protonmail.ch</a><br>
+
+              Blog - <a href="http://blog.uzi200.me/about">blog.uzi200.me/about</a><br>
+
+              Twitter - <a href="http://twitter.com/@UZI200">@UZI200</a> <br>
+
+              Github - <a href="http://github.com/uzi200"> UZI200</a>
+
+              <br><br>
+            <h5>Otros proyectos</h5>
+
+              <a href="http://omnipresent.uzi200.me">omnipresent.uzi200.me</a><br>
+              <a href="http://chasser.co">chasser.co</a><br>
+
+          </div>
+        
+        </div>
+    
+    {% block contenido %} {% endblock%}
+     
+ 
+ 
+      <footer class="row">
+        <div class="large-12 columns"><hr/>
+          <div class="row">
+ 
+            <div class="large-6 columns">
+              <p>Julio César 2014</p>
+            </div>
+ 
+            <div class="large-6 columns">
+              <ul class="inline-list right">
+                <li><a href="/docs">Documentación</a></li>
+              	<li><a href="http://blog.uzi200.me/about">Sobre</a></li>
+
+              </ul>
+            </div>
+ 
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+    
+    <script src="{{STATIC_URL}}js/vendor/jquery.js"></script>
+    <script src="{{STATIC_URL}}js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
