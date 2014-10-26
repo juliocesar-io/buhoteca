@@ -70,7 +70,7 @@ DATABASES = {
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    os.path.join('templates'),
+    "/home/django/biblioteca/templates",
 )
 
 # Internationalization
