@@ -1,8 +1,9 @@
 from django.db import models
+from django_countries.fields import CountryField
 
 class Autor(models.Model):
-	nombres = models.CharField(max_length=20, unique=True, blank=False)
-	nacionalidad = models.CharField(max_length=20, unique=True, blank=False)
+	nombre = models.CharField(max_length=20, unique=True, blank=False)
+	nacionalidad = CountryField()
 
 	def __unicode__(self):
- 		return self.nombres
+ 		return self.nombre

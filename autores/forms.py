@@ -5,5 +5,6 @@ from .models import Autor
 
 class AutorForm(forms.ModelForm):
 
-    class Meta:
-        model = Autor
+	nombre = forms.CharField(widget=forms.TextInput(attrs={'class': 'error','placeholder': 'Julio César'}))
+    	class Meta:
+        	model = Autor
