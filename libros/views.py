@@ -4,7 +4,8 @@ from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render_to_response
 from django.shortcuts import render
-from .models import Autor, Libro
+from .models import Libro
+from autores.models import Autor
 from .forms import LibroForm
 
 def inicio(request):
