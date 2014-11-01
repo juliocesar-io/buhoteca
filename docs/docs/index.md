@@ -24,9 +24,9 @@ Acontinuación describire algunos fudamentos teoricos y las tecnologias que se u
 
 La actividad propope una base de datos relacional, he aqui la representacion con el modelo Entidad-Relación
 
-![Db](http://i.imgur.com/GzqQzu0.png)
+![Db](https://raw.githubusercontent.com/uzi200/biblioteca-django/master/dise%C3%B1o_db.png)
 
-El gestor de base de datos que se utlizara  para el proyecto sera PostgreSQL 9.x  [Ver código SQL](http://git.uzi200.me/uzi200/biblioteca-django/blob/master/db_biblioteca.sql) 
+El gestor de base de datos que se utlizara  para el proyecto sera PostgreSQL 9.x  [Ver código SQL](https://github.com/uzi200/biblioteca-django/blob/master/script_db.sql) 
 
 
 
