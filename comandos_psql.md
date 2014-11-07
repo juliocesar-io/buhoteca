@@ -26,7 +26,7 @@ nombre varchar(50) NOT NULL,
 nacionalidad varchar(50) NOT NULL,
 );
 ```
-
+Para el proyecto pueden descargar este [script SQL](), donte estan todas la tablas y relaciones de la Fig.1, esto lo pueden importar en phpmyadmin para visualizarlo de forma mas gráfica.
 
 ###Gestión de usuarios
 
@@ -36,7 +36,7 @@ Crear un usuario
 createuser $nombre_usuario --pwprompt / dropuser
 ```
 
-Perimisos sobre la base de datos
+Permisos sobre la base de datos
 
 ```
 ALTER DATABASE $nombre_db OWNER to $nombre_usuario;
