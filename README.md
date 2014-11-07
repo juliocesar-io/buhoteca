@@ -16,12 +16,11 @@ Documentación oficial del framework utilizado -  Django https://docs.djangoproj
 ```
 $ pip install -r requirements.txt
 ```
-------
 
-## El Framework
+##El Framework
 
 
-##I. Modelos
+### I. Modelos
 En el directorio libros se encuentran los modelos donde se definen así:
 
 $  libros/models.py
@@ -38,10 +37,7 @@ $  libros/models.py
 En la documentación oficial esta la referencia de todos los tipos de datos, restricciones relaciones. 
 
 
-------
-
-
-##II. Base de datos
+### II. Base de datos
 
 Todas las configuraciones  para trabajar con una base de datos en en el proyecto utilizando PostgreSQL.
 
@@ -103,7 +99,7 @@ Para el proyecto pueden descargar este [script SQL](https://github.com/uzi200/bi
 
 > Es importante mencionar que en Django no es necesario hacer manualmente __DDL__ de SQL basta con definir los modelos en el framework, sincronizarlos con el comando de Django ```syncdb```y el __ORM__(Object relational model) se encargara de generar el script en la base de datos que se configuro en la conexión. 
 > 
-> En la sección de [Modelos](https://github.com/uzi200/biblioteca-django#I. Modelos)  se explica como definirlos.
+> En la sección de [Modelos](https://github.com/uzi200/biblioteca-django#i-modelos)  se explica como definirlos.
 
 
 #### Algo de DML
@@ -120,3 +116,4 @@ Para el proyecto pueden descargar este [script SQL](https://github.com/uzi200/bi
 ```
 SELECT $atributo FROM $nombre_tabla WHERE $condición
 ```
+
