@@ -19,7 +19,7 @@ Proyecto final para el curso de base de datos
 $ pip install -r requirements.txt
 ```
 
-* Configurar el acceso al gestor de base de datos en o dejarlo como esta para usar SQLite
+* Configurar el acceso al gestor de base de datos
 ```
    $ vim biblioteca/settings.py
 
