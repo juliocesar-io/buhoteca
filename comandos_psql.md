@@ -1,27 +1,51 @@
-#Comandos PostgreSql
+#Comandos PostgreSQL
 
-Acontinuación algunos comandos utiles en el flujo de trabajo con PostgreSql
+Acontinuación algunos comandos utiles en el flujo de trabajo con PostgreSQL.
 
-###Instalación
 
-- apt-get install postgresql postgresql-contrib
+Ingresar al la utilidad de linea de comandos
 
-###Gestión de usuarios
-
-- createuser $user --pwprompt / dropuser
-- ALTER DATABASE biblioteca_dev OWNER to uzi200;
-
+```
+$ sudo -u  postgres psql
+```
 
 ###DDL
 
-- CREATE DATABASE $nombre_db
+Crear una base de datos
 
-- 
+```
+CREATE DATABASE $nombre_db
+```
+
+Crear tablas
+
+```
+CREATE TABLE autor (
+id int NOT NULL,
+nombre varchar(50) NOT NULL,
+nacionalidad varchar(50) NOT NULL,
+);
+```
+
+
+###Gestión de usuarios
+
+Crear un usuario
+
+```
+createuser $nombre_usuario --pwprompt / dropuser
+```
+
+Perimisos sobre la base de datos
+
+```
+ALTER DATABASE $nombre_db OWNER to $nombre_usuario;
+```
 
 
 ###DML
 
-- Ingresar al la utilidad de linea de comandos: sudo -u  postgres psql
+
 
 - Listar todas las bases de datos: \l
 
