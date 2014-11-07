@@ -1,87 +1,122 @@
-***
+#Biblioteca-UCC
+_Proyecto final para el curso de base de datos_
 
-# Biblioteca v0.1 
+A continuación explicare como trabajar con el proyecto si están interesados en replicarlo para trabajar en el, dado el caso podríamos implementarlo en la Universidad.
 
-Proyecto final para el curso de base de datos
-
+Documentación oficial del framework utilizado -  Django https://docs.djangoproject.com/en/1.7/
 
 ### Requerimientos
+* Python/Django
 
-	*Python/Django
-	*PostgreSQL
-
+* PostgreSQL
 ### Instalación
-
 * Crear un  virtualenv
 
-* Instalar librerias de Django::
+* Instalar dependencias 
 ```
 $ pip install -r requirements.txt
 ```
+------
 
-* Configurar el acceso al gestor de base de datos
-```
-   $ vim biblioteca/settings.py
+## El Framework
 
-   	DATABASES = {
-    	'default': {
-        	'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        	'NAME': 'django',
-        	'USER': 'tu_usuario',
-        	'PASSWORD': 'tu_contraseña,
-        	'HOST': 'localhost',
-        	'PORT': '',
-    	}	
-	}
-```
 
-Sinconizar la base de datos
+##I. Modelos
+En el directorio libros se encuentran los modelos donde se definen así:
+
+$  libros/models.py
 
 ```
-$ python manage.py syncdb
-```
-Ejecutar el servidor
-
-```	
-$ python mange.py runserver
-```
-
-### Patrones de Django
-
-Acontinuación explicare como trabajar con el proyecto si estan interesados en replicarlo para trabajar en el,dado el caso podriamos implentarlo en la Universidad.
-
-Documentación oficial del framework -> https://docs.djangoproject.com/en/1.7/
-
-
-#### Los Modelos
-
-En el directorio libros se encuentran los modelos donde se definen asi:
-
-```
-$ vim libros/models.py
-
-	class Libro(models.Model):
-		titulo = models.CharField(max_length=100, verbose_name='Titulo', unique=True)
-		autor = models.ForeignKey(Autor)
-
-		def __unicode__(self):
- 			return self.titulo
+    class Libro(models.Model):
+        titulo = models.CharField(max_length=100)
+        autor = models.ForeignKey(Autor)
+        
+        def __unicode__(self):
+            return self.titulo
 ```
 
-Luego al sincronizar la base de datos se genera un script que hace la rutina "CREATE TABLE" en SQL como todos sus atributos, a esto en Django se le llama ORM.
+En la documentación oficial esta la referencia de todos los tipos de datos, restricciones relaciones. 
 
 
+------
 
 
+##II. Base de datos
+
+Todas las configuraciones  para trabajar con una base de datos en en el proyecto utilizando PostgreSQL.
+
+#### Conexión a la base de datos
+
+En el archivo 
+$ biblioteca/settings.py
+```
+ DATABASES = {
+        'default': {
+            'ENGINE':                    'django.db.backends.postgresql_psycopg2',
+            'NAME': '$nombre_db',
+            'USER': '$nombre_usuario',
+            'PASSWORD': '$contraseña,
+            'HOST': 'localhost',
+            'PORT': '',
+        }   
+}
+```
 
 
+#### Creación de la base de datos
+
+Ingresar al la utilidad de linea de comandos de Posgresql
+
+```
+$ sudo -u  postgres psql
+```
+
+#### Creación de usuarios
+
+```
+postgres-# CREATEUSER $nombre_usuario --pwprompt
+```
+
+Permisos sobre la base de datos
+
+```
+postgres-# ALTER DATABASE $nombre_db OWNER to $nombre_usuario;
+```
+
+#### Crear una base de datos
 
 
+```
+postgres-# CREATE DATABASE $nombre_db
+```
+
+#### Creación de tablas
+
+```
+postgres-# CREATE TABLE autor (
+id int NOT NULL,
+nombre varchar(50) NOT NULL,
+nacionalidad varchar(50) NOT NULL,
+);
+```
+Para el proyecto pueden descargar este [script SQL](https://github.com/uzi200/biblioteca-django/blob/master/script_db.sql), donde están todas la tablas y relaciones de la **Fig.1**, este script lo pueden importar a __phpmyadmin__ para visualizarlo de forma mas gráfica.
+
+> Es importante mencionar que en Django no es necesario hacer manualmente __DDL__ de SQL basta con definir los modelos en el framework, sincronizarlos con el comando de Django ```syncdb```y el __ORM__(Object relational model) se encargara de generar el script en la base de datos que se configuro en la conexión. 
+> 
+> En la sección de [Modelos](https://github.com/uzi200/biblioteca-django#I. Modelos)  se explica como definirlos.
 
 
+#### Algo de DML
 
+- Listar todas las bases de datos: ```\l```
+ 
+- Conectarse a una en particular:  ``` \c $nombre_db```
+    
+- Mostrar las tablas: ``` \d $nombre_tabla``` 
 
+- Ver esquema una tabla: ```\d+ $nombre_tabla``` 
 
-
-
-
+#### Consultas
+```
+SELECT $atributo FROM $nombre_tabla WHERE $condición
+```
