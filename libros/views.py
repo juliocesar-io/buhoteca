@@ -27,7 +27,3 @@ def nuevo_libro(request, template='libroForm.html'):
         "form": form,
     }
     return render_to_response(template, kwvars, context_instance=RequestContext(request))
-
-
-def docs(request):
-    return render(request,'docs.html')
