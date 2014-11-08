@@ -9,11 +9,12 @@ Diseño de la base de datos
 
 La actividad propone una base de datos relacional, he aquí la representación con el modelo Entidad-Relación
 
-__Fig.1__
-![Db](https://raw.githubusercontent.com/uzi200/biblioteca-django/master/dise%C3%B1o_db.png)
 
-El gestor de base de datos que se utilizara  para el proyecto sera PostgreSQL 9.x  [Ver código SQL](https://github.com/uzi200/biblioteca-django/blob/master/script_db.sql) 
+.. image:: https://raw.githubusercontent.com/uzi200/biblioteca-django/master/dise%C3%B1o_db.png
 
+El gestor de base de datos que se utilizara  para el proyecto sera PostgreSQL 9.x  Ver código SQL_
+
+https://github.com/uzi200/biblioteca-django/blob/master/script_db.sql
 
 ¿Que es Python?
 ----------------
