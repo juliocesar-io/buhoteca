@@ -18,7 +18,7 @@ def inicio(request):
 def nuevo_libro(request, template='libroForm.html'):
     form = LibroForm()
     if request.method == "POST":
-    	form = LibroForm(request.POST)
+    	form = LibroForm(request.POST, request.FILES)
         if form.is_valid():
         	form.save()
 		return render(request,'libroNuevo.html')
