@@ -2,11 +2,10 @@
 
 {% block contenido %}
 <br>
-	 <h3>Agregar un nuevo libro</h3>
-    <div class="large-8 columns">
-        <div class=" panel row">
-       
-        <form action='' method='POST'>
+	  <div class=" large-8 columns">
+      <h3>Agregar un nuevo libro</h3>
+      <div class=" panel large-10 small-11 columns">
+        <form  enctype='multipart/form-data' action='' method='POST'>
             <div class="row">
                 <div class="  large-12 columns">
                             {% csrf_token %}
@@ -28,7 +27,7 @@
             <br>
 
             <div class="row">
-                   <div class="large-4 columns">
+                  <div class="large-4 columns">
                             <label > Autor: 
                              {{ form.autor }}
                             </label>
@@ -40,37 +39,61 @@
                               </small>
                               {% endfor %}
                           {% endif %}
-                   </div>
+                  </div>
 
-                   <div class="large-4 columns">
-                    <label s >Area
-                     <input type="text" placeholder="Programación" />
-                    </label>
-                    </div>
+                  <div class="large-4 columns">
+                            <label > Area: 
+                             {{ form.area }}
+                            </label>
+                            {% if form.area.errors %}
+                     
+                              {% for error in form.area.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+                  </div>
 
-                     <div class="large-4 columns">
-                    <label >Editorial
-                     <input type="text" placeholder="O'Reilly Media" />
-                    </label>
-                    </div>
-
-                    <div class="  large-4 columns">
-                    <input style="background-color:#7bac0f" class="button small " type='submit' value='Registrar'/>
-                </div>
-
-
-
+                  <div class="large-4 columns">
+                            <label > Editorial: 
+                             {{ form.editorial }}
+                            </label>
+                            {% if form.editorial.errors %}
+                     
+                              {% for error in form.editorial.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+                  </div>  
             </div>
 
-             
-                
-                
-        
+            <div class="row">
+
+              <div class="large-8 columns">
+                            <label > Imagen de portada: 
+                             {{ form.cover_url }}
+                            </label>
+                            {% if form.cover_url.errors %}
+                     
+                              {% for error in form.cover_url.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+                  </div>
+              </div>
+
+              <br>
+          <input style="background-color:#7bac0f" class="button tiny " type='submit' value='Registrar libro'/>
 
         
         </form>
 
-        <p> Nuevo autor ? <a href="{% url 'autores_nuevo' %}">Registralo áca</a>  </p>
+        <p> ¿ No encuentras el autor ? <a href="{% url 'autores_nuevo' %}"> Registralo áca</a>  </p>
     
         </div>
       </div>

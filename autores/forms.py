@@ -8,3 +8,4 @@ class AutorForm(forms.ModelForm):
 	nombre = forms.CharField(widget=forms.TextInput(attrs={'class': 'error','placeholder': 'Julio César'}))
     	class Meta:
         	model = Autor
+        	fields = ['nombre','nacionalidad']

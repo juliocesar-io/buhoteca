@@ -3,9 +3,11 @@ from autores.models import Autor
 
 class Libro(models.Model):
 	titulo = models.CharField(max_length=50, verbose_name='Titulo', unique=True, blank=False)
-	#area =  models.CharField(max_length=50, verbose_name='Area', null=True, blank=True )
-	#editorial = models.CharField(max_length=50, verbose_name='Editorial')
-	#Relacion muchos a muchos el ORM de Django creara una tabla llamada "libro_autor" 
+	area = models.CharField(max_length=50, verbose_name='Area', null=True)
+	editorial = models.CharField(max_length=50, verbose_name='Editorial', null=True)
+	cover_url = models.ImageField(upload_to='covers', verbose_name='Cover', blank=True, null=True)
+
+	#Relacion muchos a muchos el ORM de Django creara una tabla llamada "libro_autor"
 	autor = models.ForeignKey(Autor)
 
 	def __unicode__(self):
