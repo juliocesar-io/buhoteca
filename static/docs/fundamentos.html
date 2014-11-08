@@ -1,0 +1,219 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Fundamentos &mdash; biblioteca 0.4 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="top" title="biblioteca 0.4 documentation" href="index.html"/>
+        <link rel="next" title="Configuración" href="configuracion.html"/>
+        <link rel="prev" title="Proyecto Biblioteca" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        <a href="index.html" class="fa fa-home"> biblioteca</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+        
+            <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Fundamentos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#diseno-de-la-base-de-datos">Diseño de la base de datos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-python">¿Que es Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#que-es-un-framework">¿ Que es un framework ?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuracion.html">Configuración</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuracion.html#entorno">Entorno</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuracion.html#framework">Framework</a></li>
+</ul>
+</li>
+</ul>
+
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">biblioteca</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Fundamentos</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/fundamentos.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            
+  <div class="section" id="fundamentos">
+<h1>Fundamentos<a class="headerlink" href="#fundamentos" title="Permalink to this headline">¶</a></h1>
+<p>A continuación describiré algunos fundamentos teóricos y las tecnologías que se utilizarán.</p>
+<div class="section" id="diseno-de-la-base-de-datos">
+<h2>Diseño de la base de datos<a class="headerlink" href="#diseno-de-la-base-de-datos" title="Permalink to this headline">¶</a></h2>
+<p>La actividad propone una base de <strong>datos relacional</strong>, he aquí la representación con el modelo Entidad-Relación</p>
+<p><strong>Fig.1</strong> Diseño de la db para la biblioteca</p>
+<img alt="https://raw.githubusercontent.com/uzi200/biblioteca-django/master/dise%C3%B1o_db.png" src="https://raw.githubusercontent.com/uzi200/biblioteca-django/master/dise%C3%B1o_db.png" />
+<p>El gestor de base de datos que se utilizara  para el proyecto sera <tt class="docutils literal"><span class="pre">PostgreSQL</span> <span class="pre">9.x</span></tt>  <a class="reference external" href="https://github.com/uzi200/biblioteca-django/blob/master/script_db.sql">Ver código SQL</a></p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Pueden  importar el código SQL a phpmyadmin para que observen de forma gráfica el schema y las relaciones, simplemente descargar el archivo en formato .sql e importar desde el cliente de phpmyadmin.</p>
+</div>
+</div>
+<div class="section" id="que-es-python">
+<h2>¿Que es Python?<a class="headerlink" href="#que-es-python" title="Permalink to this headline">¶</a></h2>
+<p>Python es un lenguaje de programación muy  popular para desarrollo ágil, es multi-propósito , es fácil de aprender, funciona en todos los sistemas operativos es open source y es un lenguaje interpretado.</p>
+<p>Entre las cosas que destaco :</p>
+<ul class="simple">
+<li>Ágil: Ahorra mucho código para desarrolladores WEB debido a Frameworks muy potentes.</li>
+<li>Coherente : sintaxis estricta e intuitiva, los patrones están muy bien definidos.</li>
+<li>Comunidad: Gracias a la gran comunidad existen muchas librerías y soporte para cualquier problema.</li>
+</ul>
+</div>
+<div class="section" id="que-es-un-framework">
+<h2>¿ Que es un framework ?<a class="headerlink" href="#que-es-un-framework" title="Permalink to this headline">¶</a></h2>
+<p>Es simplemente la forma de organizar el desarrollo de una aplicación, es un esquema (un esqueleto, un patrón).</p>
+<p>Existe un  paradigma llamado <tt class="docutils literal"><span class="pre">MTV</span></tt> es uno de los mas comunes, este consiste en separar en la aplicación la gestión de los datos, las operaciones, y la forma como la ve el usuario.</p>
+<p>En el proyecto se utilizara <strong>Django</strong> como framework. Es buena practica siempre revisar el <a class="reference external" href="https://www.djangoproject.com/">sitio oficial</a> y la <a class="reference external" href="https://docs.djangoproject.com/en/1.7/">documentación</a></p>
+<p><strong>Fig.2</strong> Arquitectura de Django</p>
+<img alt="http://i.imgur.com/Iiakdo7.png" src="http://i.imgur.com/Iiakdo7.png" />
+<p>Conociendo la Arquitectura entremos un poco mas en detalle acerca de Django</p>
+<p><strong>El modelo</strong></p>
+<p>El modelo define los datos almacenados, se encuentra en forma de clases de Python, cada tipo de dato que debe ser almacenado se encuentra en una variable con ciertos parámetros, posee métodos también. Todo esto permite indicar y controlar el comportamiento de los datos.</p>
+<p><strong>La vista</strong></p>
+<p>La vista se presenta en forma de funciones en Python, su propósito es determinar que datos serán visualizados, entre otras cosas más que iremos viendo conforme avanzamos con el curso. El ORM de Django permite escribir código Python en lugar de SQL para hacer las consultas que necesita la vista. La vista también se encarga de tareas conocidas como el envío de correo electrónico, la autenticación con servicios externos y la validación de datos a través de formularios. Lo mas importante a entender con respecto a la vista es que no tiene nada que ver con el estilo de presentación de los datos, sólo se encarga de los datos, la presentación es tarea de la plantilla.</p>
+<p><strong>La plantilla</strong></p>
+<p>La plantilla es básicamente una página HTML con algunas etiquetas extras propias de Django, en si no solamente crea contenido en HTML (también XML, CSS, Javascript, CSV, etc).Esto permite que la lógica del sistema siga permaneciendo en la vista.</p>
+<p><strong>Los archivos predeterminados</strong></p>
+<p>Otra parte importante es entender el propósito de los archivos que se crean de manera predeterminada, algunos de estos son:</p>
+<p><tt class="docutils literal"><span class="pre">manage.py</span></tt>: Este archivo contiene una porción de código que permite interactuar con el proyecto de Django de muchas formas.</p>
+<p><tt class="docutils literal"><span class="pre">settings.py</span></tt>: Este archivo contiene todas las configuraciones para el proyecto.</p>
+<p><tt class="docutils literal"><span class="pre">models.py</span></tt> : En este archivo se declaran las clases del modelo.</p>
+<p><tt class="docutils literal"><span class="pre">views.py</span></tt> : En este archivo se declaran las funciones de la vista.</p>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="configuracion.html" class="btn btn-neutral float-right" title="Configuración"/>Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Proyecto Biblioteca"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2014, Julio César.
+    </p>
+  </div>
+
+  <a href="https://github.com/snide/sphinx_rtd_theme">Sphinx theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'',
+            VERSION:'0.4',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
