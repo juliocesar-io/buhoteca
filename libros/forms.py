@@ -14,4 +14,4 @@ class LibroForm(forms.ModelForm):
 	editorial = forms.CharField(widget=forms.TextInput(attrs={'class': 'error','placeholder': "O'Reilly media"}))
     	class Meta:
         	model = Libro
-        	fields = ['titulo','area','autor','editorial','cover_url']
+        	fields = ['titulo','area','autor','editorial','cover_url','facultad','disponible_fisico','digital_url']

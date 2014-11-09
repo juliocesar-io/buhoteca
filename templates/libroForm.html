@@ -7,6 +7,7 @@
       <div class=" panel large-10 small-11 columns">
         <form  enctype='multipart/form-data' action='' method='POST'>
             <div class="row">
+                <p style="text-align:center; color:gray;"> <em> Datos generales</em></p>
                 <div class="  large-12 columns">
                             {% csrf_token %}
                             {{ form.non_field_errors }}
@@ -72,7 +73,28 @@
 
             <div class="row">
 
-              <div class="large-8 columns">
+              <div class="large-4 columns">
+                            <label > Facultad: 
+                             {{ form.facultad }}
+                            </label>
+                            {% if form.facultad.errors %}
+                     
+                              {% for error in form.facultad.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+              </div>
+
+              
+            </div>
+
+            <div class="row">
+
+              <p style="text-align:center; color:gray;"> <em> Recursos</em></p>
+
+              <div class="large-4 columns">
                             <label > Imagen de portada: 
                              {{ form.cover_url }}
                             </label>
@@ -84,8 +106,39 @@
                               </small>
                               {% endfor %}
                           {% endif %}
-                  </div>
               </div>
+              <div class="large-4 columns">
+                            <label > ¿Esta disponible en fisico?: 
+                             {{ form.disponible_fisico }}
+                            </label>
+                            {% if form.disponible_fisico.errors %}
+                     
+                              {% for error in form.disponible_fisico.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+              </div>
+
+              <div class="large-4 columns">
+                            <label > Archivo Digital: 
+                             {{ form.digital_url }}
+                            </label>
+                            {% if form.digital_url.errors %}
+                     
+                              {% for error in form.digital_url.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+              </div>
+
+
+
+
+            </div>
 
               <br>
           <input style="background-color:#7bac0f" class="button tiny " type='submit' value='Registrar libro'/>
