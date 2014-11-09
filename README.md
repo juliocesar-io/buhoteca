@@ -66,6 +66,11 @@ Ingresar al la utilidad de linea de comandos de Posgresql
 ```
 $ sudo -u  postgres psql
 ```
+ó para conectarse a una db con un usuario en particular
+
+```
+psql -d biblioteca_dev -U uzi200
+```
 
 #### Creación de usuarios
 
