@@ -7,12 +7,12 @@
       <h3>Últimos libros</h3>
       {% for libro in libros %}
           <div class="large-4 small-6 columns" data-equalizer-watch>
-            <a href="#"><img src="{{MEDIA_URL}}{{libro.cover_url}}"></a>
-            <div class="panel">
+            <a href="libro/{{libro.id}}"><img src="{{MEDIA_URL}}{{libro.cover_url}}"></a>
+            <!--- <div class="panel">
               <h5> <strong>{{libro.titulo}} </strong></h5>
               <h6 class="subheader"><em>  {{libro.autor}}</em> </h6>
               <a href="#"># {{libro.area}}</a>
-            </div>
+            </div> -->
           </div>
       {% empty %}
         <p> <em>Aún no hay libros registrados </em> <a href="/libros/nuevo">Registra uno!</a></p>
