@@ -11,7 +11,7 @@ La actividad propone una base de **datos relacional**, he aquí la representaci�
 
 **Fig.1** Diseño de la db para la biblioteca
 
-.. image:: https://raw.githubusercontent.com/uzi200/biblioteca-django/master/dise%C3%B1o_db.png
+.. image:: https://raw.githubusercontent.com/uzi200/biblioteca-django/master/biblioteca/static/img/dise%C3%B1o_db.png
 
 El gestor de base de datos que se utilizara  para el proyecto sera ``PostgreSQL 9.x``  `Ver código SQL`_
 
@@ -75,7 +75,7 @@ Otra parte importante es entender el propósito de los archivos que se crean de 
 
 
 
-.. _`Ver código SQL`: https://github.com/uzi200/biblioteca-django/blob/master/script_db.sql
+.. _`Ver código SQL`: https://github.com/uzi200/biblioteca-django/blob/master/biblioteca/static/img/script_db.sql
 
 .. _`sitio oficial`: https://www.djangoproject.com/
 
