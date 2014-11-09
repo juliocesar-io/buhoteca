@@ -12,6 +12,7 @@ class LibroForm(forms.ModelForm):
 	#autor = forms.ChoiceField(widget=forms.Select(attrs={'class': 'error'}), choices = autores)
 	area = forms.CharField(widget=forms.TextInput(attrs={'class': 'error','placeholder': 'Programación'}))
 	editorial = forms.CharField(widget=forms.TextInput(attrs={'class': 'error','placeholder': "O'Reilly media"}))
+	fecha_publicacion = forms.CharField(widget=forms.TextInput (attrs={'placeholder': "AA/MM/DD"}))
     	class Meta:
         	model = Libro
-        	fields = ['titulo','area','autor','editorial','cover_url']
+        	fields = ['titulo','area','autor','editorial','cover_url','facultad','disponible_fisico','digital_url','fecha_publicacion']

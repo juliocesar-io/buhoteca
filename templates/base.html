@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Biblioteca </title>
     <link rel="stylesheet" href="{{STATIC_URL}}css/foundation.css" />
+    <link rel="stylesheet" href="{{STATIC_URL}}css/biblioteca.css">
     <script src="{{STATIC_URL}}js/vendor/modernizr.js"></script>
     <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -61,30 +62,30 @@
               <ul class="right">
                 <li class="divider"></li>
                 <li class="has-dropdown">
-                  <a href="#">Recursos</a>
+                  <a href="#">Consultas</a>
                   <ul class="dropdown">
-                    <li><label>Section Name</label></li>
+                    <li><label>Consultas</label></li>
                     <li class="has-dropdown">
-                      <a href="#" class="">Categorias</a>
+                      <a href="#" class="">Filtrar</a>
                       <ul class="dropdown">
-                        <li><a href="#">Ciencias basicas</a></li>
-                        <li><a href="#">Historia</a></li>
-                        <li><a href="#">Obras literarias</a></li>
+                        <li><a href="#">Disponible fisico</a></li>
+                        <li><a href="#">Disponible digital</a></li>
                       </ul>
                     </li>
-                    <li><a href="#">Revistas</a></li>
-                    <li><a href="#">Papers</a></li>
+                    <li><a href="#">Autores</a></li>
+                    <li><a href="#">Areas</a></li>
                     <li class="divider"></li>
                     <li><label> Por facultades </label></li>
-                    <li><a href="#">Ingenieria de Sistemas</a></li>
                     <li><a href="#">Derecho</a></li>
+                    <li><a href="#">Ingenieria de Sistemas</a></li>
                     <li><a href="#">Psicologia</a></li>
                     <li class="divider"></li>
                     <li><a href="#">Ver todos →</a></li>
                   </ul>
                 </li>
                 <li class="divider"></li>
-                <li><a style="background-color:#F25E5C;"href="/libros/nuevo/">Agregar libro</a></li>
+                <li><a style="background-color:gray;"href="/libros/nuevo/">Agregar libro</a></li>
+
                 <li class="divider"></li>
                 <li class="has-dropdown">
                   <a href="#">Mi cuenta</a>
@@ -110,14 +111,13 @@
           <img src="{{STATIC_URL}}img/logo.png">
  
           <div  class=" panel">
-            <h4><strong>Sobre el proyecto</strong></h4>
-            <h5 class="subheader"> Proyecto final para el curso de base de datos, esta idea se puede proyectar para impletarlo en la universidad, ya que esta  no cuenta con un sistema de catalogo y prestamo eficiente para los recursos de la biblioteca.
-            </h5>
-            <br>
-            <p>____________________</p>
+            <h4>Sobre el proyecto</h4>
+            <p class="subheader"> Proyecto final para el curso de base de datos, le proyecto es completamente <strong>Open Source</strong> , la idea se puede proyectar para impletarlo en la universidad ya que esta  no cuenta con un sistema de catalogo y prestamo eficiente para los recursos de la biblioteca.
+            </p>
+            
             <p>Si se animan a contribuir pueden leer la documentación para que entiendan la estructura del proyecto (como funcionan los modelos, la base de datos diseño y conexión, las vistas, etc..), el repositorio esta disponible en Github. </p>
               <a style="background-color:#7BAC0F" href="https://github.com/uzi200/biblioteca-django" class="button tiny">Repositorio</a>
-              <a href="docs/"class="button tiny">Documentación</a>
+              <a href="http://biblioteca.uzi200.me/docs"class="button tiny">Documentación</a>
           </div>
  
           <a href="https://github.com/uzi200/biblioteca-django"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/121cd7cbdc3e4855075ea8b558508b91ac463ac2/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png"></a> 
@@ -142,6 +142,7 @@
           </div>
         
         </div>
+        
 
     {% block contenido %} {% endblock%}
      
@@ -157,7 +158,7 @@
  
             <div class="large-6 columns">
               <ul class="inline-list right">
-                <li><a href="/docs">Documentación</a></li>
+                <li><a href="http://biblioteca.uzi200.me/docs">Documentación</a></li>
               	<li><a href="http://blog.uzi200.me/about">Sobre</a></li>
 
               </ul>

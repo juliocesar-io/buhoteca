@@ -4,15 +4,48 @@
 <br>
   <div class="large-8 columns">
     <div class="row" data-equalizer>
-      <h3>Últimos libros</h3>
+
+      <div class="panel">
+            <h3> <strong>Estantería</strong> </h3>
+            <p> ¿Buscando libros?  Descubre nuestra estantería, puedes comprar, descargar, prestar o compartir tus libros favoritos. Registrate, crea tu colección y participa en <a href=""> nuestra comunidad</a>.  </p>
+            <a style="background-color:#F25E5C;" class="button small" href="">Registrarme</a>
+              
+      <nav id="menu_estanteria">
+      <ul>
+        <li><strong>Descubre:</strong></li>
+        <li>|</li>
+        <li> <a href="">Títulos </a>  </li>
+        <li>|</li>
+        <li><a href="">Autores</a> </li>
+        <li>|</li>
+        <li><a href="">Temas</a> </li> 
+        <li>|</li>
+        <li><a href="">Facultades</a></li>
+        <li>|</li>
+      </ul>
+
+
+      </nav>
+
+      </div>
+
+      <div id="opciones-vista">
+        <strong>Ver:</strong>  <a href="">Listado</a> | <a href="">Galería</a>
+      </div>
+
+      <div id="opciones-orden">
+        <strong>Ordenar por:</strong>  <a href="">Nombre</a> | <a href="">Fecha</a>
+      </div>
+        <br>
+        <br>          
       {% for libro in libros %}
           <div class="large-4 small-6 columns" data-equalizer-watch>
-            <img src="{{MEDIA_URL}}/{{libro.cover_url}}">
-            <div class="panel">
+            <a href="libro/{{libro.id}}"><img src="{{MEDIA_URL}}{{libro.cover_url}}"></a>
+            <!--- <div class="panel">
               <h5> <strong>{{libro.titulo}} </strong></h5>
               <h6 class="subheader"><em>  {{libro.autor}}</em> </h6>
               <a href="#"># {{libro.area}}</a>
-            </div>
+            </div> -->
           </div>
       {% empty %}
         <p> <em>Aún no hay libros registrados </em> <a href="/libros/nuevo">Registra uno!</a></p>

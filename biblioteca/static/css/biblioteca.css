@@ -1,0 +1,25 @@
+
+
+
+.opciones
+{
+	margin-bottom: 1em;
+}
+
+#opciones-orden
+{
+	display: inline-block;
+	float: right;
+}
+
+#opciones-vista{
+	display: inline-block;
+	float: left;
+}
+
+#menu_estanteria li
+{
+    display: inline;
+    list-style-type: none;
+    padding-right: 20px;
+}
