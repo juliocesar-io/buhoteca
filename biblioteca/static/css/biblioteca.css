@@ -1,6 +1,11 @@
 
 
 
+.opciones
+{
+	margin-bottom: 1em;
+}
+
 #opciones-orden
 {
 	display: inline-block;
