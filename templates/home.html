@@ -4,7 +4,18 @@
 <br>
   <div class="large-8 columns">
     <div class="row" data-equalizer>
-      <h3>Últimos libros</h3>
+      <h3>Lista de Libros</h3>
+
+      <nav id="navlist">
+      <ul>
+        |<li>Autores </li> |
+        <li>Temas </li> |
+        <li>Facultades</li>
+      </ul>
+
+
+      </nav>
+
       {% for libro in libros %}
           <div class="large-4 small-6 columns" data-equalizer-watch>
             <a href="libro/{{libro.id}}"><img src="{{MEDIA_URL}}{{libro.cover_url}}"></a>

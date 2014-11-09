@@ -8,7 +8,7 @@ class Libro(models.Model):
 	cover_url = models.ImageField(upload_to='covers', verbose_name='Cover', blank=True, null=True)
 	digital_url = models.FileField(upload_to='digital', verbose_name='Archivo Digital', blank=True, null=True)
 	disponible_fisico = models.BooleanField(verbose_name='Disponible fisico', default=False)
-
+	fecha_publicacion = models.DateField(verbose_name='Fecha de publicacion', null=True)
 
 	FACULTAD_CHOICES = (
     	(u'1', u'Derecho'),

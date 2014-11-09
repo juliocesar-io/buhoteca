@@ -13,13 +13,14 @@
 			<h4> <strong>{{libro.titulo}}</strong> </h4>
 			<p>Por <a href="">{{libro.autor}}</a> </p>
 			<p>Editorial <strong>{{libro.editorial}}</strong> </p>
+			<p>Fecha de publicación <strong>{{libro.fecha_publicacion}}</strong> </p>
 			<p> Area <a href="">#{{libro.area}}</a> </p>
-			<p> Facultad <a style="color:green;" href="">{{libro.facultad}}</a> </p>
+			<p> Facultad <a style="color:green;" href="">{{libro.get_facultad_display}}</a> </p>
 			<p> Disponible fisico:  <a style="color:red;" href="">{{libro.disponible_fisico}}</a> </p>
 
 
 			<a style="background-color:#7bac0f" class="button tiny "  href="{{libro.digital_url}}">Descargar</a>
-			<a style="background-color:#F25E5C" class="button tiny "  href="{{libro.digital_url}}">Prestar</a>
+			<a style="background-color:#F25E5C" class="button tiny "  href="#">Prestar</a>
 		
 
 

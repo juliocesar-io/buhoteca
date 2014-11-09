@@ -73,13 +73,28 @@
 
             <div class="row">
 
-              <div class="large-4 columns">
+              <div class="large-6 columns">
                             <label > Facultad: 
                              {{ form.facultad }}
                             </label>
                             {% if form.facultad.errors %}
                      
                               {% for error in form.facultad.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+              </div>
+
+
+              <div class="large-6 columns">
+                            <label > Fecha de publicación:
+                             {{ form.fecha_publicacion }}
+                            </label>
+                            {% if form.fecha_publicacion.errors %}
+                     
+                              {% for error in form.fecha_publicacion.errors %}
                               <small class="error">
                                   {{ error|escape }}
                               </small>
