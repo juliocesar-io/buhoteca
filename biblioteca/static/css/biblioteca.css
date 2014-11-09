@@ -1,5 +1,17 @@
 
 
+
+#opciones-orden
+{
+	display: inline-block;
+	float: right;
+}
+
+#opciones-vista{
+	display: inline-block;
+	float: left;
+}
+
 #menu_estanteria li
 {
     display: inline;

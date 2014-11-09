@@ -29,14 +29,15 @@
 
       </div>
 
-      <div class="opciones">
-
-        <p><strong>Ver:</strong>  <a href="">Listado</a> | <a href="">Galería</a></p>
-        <p style="text-align:right"><strong>Ordenar por:</strong>  <a href="">Nombre</a> | <a href="">Fecha</a></p>
-        
+      <div id="opciones-vista">
+        <strong>Ver:</strong>  <a href="">Listado</a> | <a href="">Galería</a>
       </div>
-          
 
+      <div id="opciones-orden">
+        <strong>Ordenar por:</strong>  <a href="">Nombre</a> | <a href="">Fecha</a>
+      </div>
+        <br>
+        <br>          
       {% for libro in libros %}
           <div class="large-4 small-6 columns" data-equalizer-watch>
             <a href="libro/{{libro.id}}"><img src="{{MEDIA_URL}}{{libro.cover_url}}"></a>
