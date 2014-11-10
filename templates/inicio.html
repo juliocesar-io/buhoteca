@@ -29,28 +29,58 @@
       <div  class=" opciones columns"><h3> Últimos libros</h3> 
 
         <div id="opciones-vista">
-          <strong>Ver:</strong>  <a href="">Listado</a> | <a href="">Galería</a>
+          <strong>Ver:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Listado</a> | <a href="" onclick="return show('galeria','lista');">Galería</a>
         </div>
         
 
-        <div id="opciones-orden">
-          <strong>Ordenar por:</strong>  <a href="">Titulo</a> | <a href="">Fecha</a>
-        </div>
     
       </div>
-        
-      {% for libro in libros %}
-      <div class="large-4 small-6 columns" data-equalizer-watch>
+   
+      <div id="galeria">
+        {% for libro in libros %}
+          <div class="large-4 small-6 columns" data-equalizer-watch>
             <a href="libro/{{libro.id}}"><img src="{{MEDIA_URL}}{{libro.cover_url}}"></a>
-            <!--- <div class="panel">
-              <h5> <strong>{{libro.titulo}} </strong></h5>
-              <h6 class="subheader"><em>  {{libro.autor}}</em> </h6>
-              <a href="#"># {{libro.area}}</a>
-            </div> -->
-          </div>
-      {% empty %}
-        <p> <em>Aún no hay libros registrados </em> <a href="/libros/nuevo">Registra uno!</a></p>
+        </div>
+         {% endfor %}
+      </div>
+
+      <div id="lista" style="display:none">
+
+<div class="columns" id="users">
+  <input class="search" placeholder="Buscar" />
+  <button class="sort" data-sort="titulo">
+    Ordenar por titulo
+  </button>
+  <table>
+    <thead>
+    <tr>
+      <th width="200">Titulo</th>
+      <th  width="200"  >Autor</th>
+      <th width="150">Editorial</th>
+      <th> Fecha de publicación</th>
+    </tr>
+  </thead>
+    <!-- IMPORTANT, class="list" have to be at tbody -->
+    <tbody class="list">
+      {% for libro in libros %}
+      <tr>
+        <td class="titulo">{{libro.titulo}}</td>
+        <td class="born">{{libro.autor}}</td>
+        <td>{{libro.editorial}}</td>
+        <td>{{libro.fecha_publicacion}}</td>
+      </tr>
       {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+ 
+      </div>   
+
+        
+  
+    
+     
     </div>
   </div>
 {% endblock %}
