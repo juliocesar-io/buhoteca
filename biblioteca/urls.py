@@ -11,6 +11,7 @@ urlpatterns = patterns('',
     url(r'^titulos/$','libros.views.listado_libros' , name='libros_listado'),
     url(r'^libro/(?P<id_libro>\d+)$','libros.views.detalle_libro', name='libro_detalle'),
     url(r'^autores/nuevo/$','autores.views.nuevo_autor', name='autores_nuevo'),
+    url(r'^autores/$','autores.views.listado_autores', name='autores_listado'),
     url(r'^admin/', include(admin.site.urls)),
 )
 

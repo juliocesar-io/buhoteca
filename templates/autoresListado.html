@@ -9,9 +9,9 @@
         <ul>
           <li><strong>Descubre:</strong></li>
           <li>|</li>
-          <li> <a style="color:red;" href="/titulos">Títulos </a>  </li>
+          <li> <a href="/titulos">Títulos </a>  </li>
           <li>|</li>
-          <li><a   href="/autores">Autores</a> </li>
+          <li><a style="color:red;"  href="/autores">Autores</a> </li>
           <li>|</li>
           <li><a href="">Temas</a> </li> 
           <li>|</li>
@@ -20,7 +20,7 @@
         </ul>
       </nav>
 
-      <div  class=" opciones columns"><h3> Todos los Títulos</h3> 
+      <div  class=" opciones columns"><h3> Todos los Autores</h3> 
 
      
         <div id="opciones-vista">
@@ -31,26 +31,22 @@
           
   <div class="columns" id="users">
     <input class="search" placeholder="Buscar en la tabla" />
-    <button class="sort" data-sort="titulo">
-    Ordenar por titulo
+    <button class="sort" data-sort="nombre">
+    Ordenar por nombre
     </button>
     <table>
     <thead>
     <tr>
-      <th width="200">Titulo</th>
-      <th  width="200"  >Autor</th>
-      <th width="150">Editorial</th>
-      <th> Fecha de publicación</th>
+      <th width="200">Nombre</th>
+      <th  width="200"  >Nacionalidad</th>
     </tr>
     </thead>
     <!-- IMPORTANT, class="list" have to be at tbody -->
     <tbody class="list">
-      {% for libro in libros %}
+      {% for autor in autores %}
       <tr>
-        <td class="titulo"> <a href="/libro/{{libro.id}}">{{libro.titulo}}</a> </td>
-        <td class="autor">{{libro.autor}}</td>
-        <td class="editorial" >{{libro.editorial}}</td>
-        <td class="fecha">{{libro.fecha_publicacion}}</td>
+        <td class="nombre">{{autor.nombre}} </td>
+        <td class="nacionalidad">{{autor.get_nacionalidad_display}}</td>
               </tr>
              {% endfor %}
           </tbody>

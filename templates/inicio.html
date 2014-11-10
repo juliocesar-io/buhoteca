@@ -15,9 +15,9 @@
         <ul>
           <li><strong>Descubre:</strong></li>
           <li>|</li>
-          <li > <a href="titulos/">Títulos </a>  </li>
+          <li > <a href="/titulos">Títulos </a>  </li>
           <li>|</li>
-          <li><a href="">Autores</a> </li>
+          <li><a href="/autores">Autores</a> </li>
           <li>|</li>
           <li><a href="">Temas</a> </li> 
           <li>|</li>
@@ -32,6 +32,11 @@
           <strong>Vista:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Listado</a> | <a href="" onclick="return show('galeria','lista');">Galería</a>
         </div>
         
+        <div id="opciones-orden">
+            <strong>Opciones:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Búsqueda</a> | 
+            <a href="#listado" onclick="return show('lista','galeria');">Ordenamiento</a> 
+  
+        </div>
 
     
       </div>
@@ -40,6 +45,12 @@
         {% for libro in libros %}
           <div class="large-4 small-6 columns" data-equalizer-watch>
             <a href="libro/{{libro.id}}"><img src="{{MEDIA_URL}}{{libro.cover_url}}"></a>
+            <div class="panel">
+            <h5> <a href="/libro/{{libro.id}}">{{libro.titulo}}</a> </h5>
+            <h6 class="subheader">{{libro.autor}}</h6>
+            </div>
+
+
         </div>
          {% endfor %}
       </div>
