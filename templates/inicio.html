@@ -29,7 +29,7 @@
       <div  class=" opciones columns"><h3> Últimos libros</h3> 
 
         <div id="opciones-vista">
-          <strong>Ver:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Listado</a> | <a href="" onclick="return show('galeria','lista');">Galería</a>
+          <strong>Vista:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Listado</a> | <a href="" onclick="return show('galeria','lista');">Galería</a>
         </div>
         
 
@@ -44,14 +44,14 @@
          {% endfor %}
       </div>
 
-      <div id="lista" style="display:none">
+<div id="lista" style="display:none">
 
-<div class="columns" id="users">
-  <input class="search" placeholder="Buscar" />
-  <button class="sort" data-sort="titulo">
+  <div class="columns" id="users">
+    <input class="search" placeholder="Buscar en la tabla" />
+    <button class="sort" data-sort="titulo">
     Ordenar por titulo
-  </button>
-  <table>
+    </button>
+    <table>
     <thead>
     <tr>
       <th width="200">Titulo</th>
@@ -59,28 +59,22 @@
       <th width="150">Editorial</th>
       <th> Fecha de publicación</th>
     </tr>
-  </thead>
+    </thead>
     <!-- IMPORTANT, class="list" have to be at tbody -->
     <tbody class="list">
       {% for libro in libros %}
       <tr>
-        <td class="titulo">{{libro.titulo}}</td>
-        <td class="born">{{libro.autor}}</td>
-        <td>{{libro.editorial}}</td>
-        <td>{{libro.fecha_publicacion}}</td>
-      </tr>
-      {% endfor %}
-    </tbody>
-  </table>
+        <td class="titulo"> <a href="/libro/{{libro.id}}">{{libro.titulo}}</a> </td>
+        <td class="autor">{{libro.autor}}</td>
+        <td class="editorial" >{{libro.editorial}}</td>
+        <td class="fecha">{{libro.fecha_publicacion}}</td>
 
-</div>
- 
-      </div>   
-
-        
   
-    
-     
+             {% endfor %}
+          </tbody>
+          </table>
+        </div>
+      </div>      
     </div>
   </div>
 {% endblock %}

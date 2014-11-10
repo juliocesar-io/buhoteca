@@ -1,7 +1,7 @@
 
 
 var options = {
-  valueNames: [ 'titulo', 'born' ]
+  valueNames: [ 'titulo', 'autor','editorial','fecha']
 };
 
 var userList = new List('users', options);
