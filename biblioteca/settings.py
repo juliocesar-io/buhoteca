@@ -30,6 +30,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,11 +91,25 @@ USE_L10N = True
 USE_TZ = True
 
 
+GRAPPELLI_ADMIN_TITLE = 'Biblioteca'
+
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'django.contrib.auth.context_processors.auth',
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 MEDIA_ROOT = '/home/django/biblioteca/biblioteca/media'
+
+STATIC_ROOT = '/home/django/biblioteca/biblioteca/static' 
 
 STATIC_URL = '/static/'
 

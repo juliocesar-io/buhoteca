@@ -20,12 +20,10 @@ class Libro(models.Model):
     	(u'3', u'Psicologia'),
     	(u'4', u'Administracion de empresas'),
 	)
-	
+
 	facultad = models.CharField(max_length=1, choices=FACULTAD_CHOICES, null=True)
 
-	#Relacion muchos a muchos con "autores": el ORM de Django creara una tabla "libro_autor" que tiene como FK 
-		#las llaves primarias de libro y autor.
-
+	#Relacion muchos a muchos, para ver el codigo sql generado por este modelo ejecutar " $./manage.py sql libros"
 	autor = models.ForeignKey(Autor)
 
 	def __unicode__(self):

@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -88,12 +89,21 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATICFILES_DIRS = ( 
 
-    os.path.join('biblioteca/static'),
+
+
+GRAPPELLI_ADMIN_TITLE = 'Biblioteca'
+
+
+
+STATICFILES_DIRS = (
+    '/home/uzi200/Projects/biblioteca/biblioteca/static',
 )
 
+
 MEDIA_ROOT = os.path.join('biblioteca/media')
+
+#STATIC_ROOT = os.path.join('biblioteca/static')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
