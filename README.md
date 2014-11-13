@@ -12,7 +12,7 @@ Documentación oficial del framework utilizado -  Django https://docs.djangoproj
 ### Instalación
 * Crear un  virtualenv
 
-* Instalar dependencias 
+* Instalar dependencias
 ```
 $ pip install -r requirements.txt
 ```
@@ -29,12 +29,12 @@ $  libros/models.py
     class Libro(models.Model):
         titulo = models.CharField(max_length=100)
         autor = models.ForeignKey(Autor)
-        
+
         def __unicode__(self):
             return self.titulo
 ```
 
-En la documentación oficial esta la referencia de todos los tipos de datos, restricciones relaciones. 
+En la documentación oficial esta la referencia de todos los tipos de datos, restricciones relaciones.
 
 
 ### II. Base de datos
@@ -43,7 +43,7 @@ Todas las configuraciones  para trabajar con una base de datos en en el proyecto
 
 #### Conexión a la base de datos
 
-En el archivo 
+En el archivo
 $ biblioteca/settings.py
 ```
  DATABASES = {
@@ -54,7 +54,7 @@ $ biblioteca/settings.py
             'PASSWORD': '$contraseña,
             'HOST': 'localhost',
             'PORT': '',
-        }   
+        }
 }
 ```
 
@@ -102,20 +102,20 @@ nacionalidad varchar(50) NOT NULL,
 ```
 Para el proyecto pueden descargar este [script SQL](https://github.com/uzi200/biblioteca-django/blob/master/script_db.sql), donde están todas la tablas y relaciones de la **Fig.1**, este script lo pueden importar a __phpmyadmin__ para visualizarlo de forma mas gráfica.
 
-> Es importante mencionar que en Django no es necesario hacer manualmente __DDL__ de SQL basta con definir los modelos en el framework, sincronizarlos con el comando de Django ```syncdb```y el __ORM__(Object relational model) se encargara de generar el script en la base de datos que se configuro en la conexión. 
-> 
+> Es importante mencionar que en Django no es necesario hacer manualmente __DDL__ de SQL basta con definir los modelos en el framework, sincronizarlos con el comando de Django ```syncdb```y el __ORM__(Object relational model) se encargara de generar el script en la base de datos que se configuro en la conexión.
+>
 > En la sección de [Modelos](https://github.com/uzi200/biblioteca-django#i-modelos)  se explica como definirlos.
 
 
 #### Algo de DML
 
 - Listar todas las bases de datos: ```\l```
- 
-- Conectarse a una en particular:  ``` \c $nombre_db```
-    
-- Mostrar las tablas: ``` \d $nombre_tabla``` 
 
-- Ver esquema una tabla: ```\d+ $nombre_tabla``` 
+- Conectarse a una en particular:  ``` \c $nombre_db```
+
+- Mostrar las tablas: ``` \d $nombre_tabla```
+
+- Ver esquema una tabla: ```\d+ $nombre_tabla```
 
 #### Consultas
 ```

@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = '-n-u0$u&bp#5k076%ihzdp&kktryz^b^kc-1h#azl3i00^h=e8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False   
+DEBUG = False
 
 TEMPLATE_DEBUG = False
 
@@ -40,7 +40,8 @@ INSTALLED_APPS = (
     'django_countries',
     'autores',
     'libros',
-   
+
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -99,7 +100,7 @@ GRAPPELLI_ADMIN_TITLE = 'Biblioteca'
 
 MEDIA_ROOT = '/home/django/biblioteca/biblioteca/media'
 
-STATIC_ROOT = '/home/django/biblioteca/biblioteca/static' 
+STATIC_ROOT = '/home/django/biblioteca/biblioteca/static'
 
 STATIC_URL = '/static/'
 

@@ -14,7 +14,10 @@ urlpatterns = patterns('',
     url(r'^libro/(?P<id_libro>\d+)$','libros.views.detalle_libro', name='libro_detalle'),
     url(r'^autores/nuevo/$','autores.views.nuevo_autor', name='autores_nuevo'),
     url(r'^autores/$','autores.views.listado_autores', name='autores_listado'),
-    
+    url(r'^libro/(?P<id_libro>\d+)/prestar','prestamo.views.nuevo_prestamo', name='prestamo_nuevo'),
+    #url(r'^ingresar/$','prestamo.views.get_lector_prestamo'),
+
+
 )
 
 
@@ -26,4 +29,4 @@ if settings.DEBUG:
         'document_root': settings.MEDIA_ROOT}))
 
     urlpatterns += staticfiles_urlpatterns()
-	
+

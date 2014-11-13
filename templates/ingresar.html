@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+<h1> Tus datos </h1>
+
+{% block contenido %}
+          <form id = 'formulario' method = 'post' action='' > {% csrf_token %}
+          <table>{{formulario}}</table>
+          <p><input type = 'submit' value = 'Ingresar' /></p>
+          </form>
+{% endblock %}

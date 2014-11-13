@@ -16,17 +16,33 @@
 			<p>Fecha de publicación <strong>{{libro.fecha_publicacion}}</strong> </p>
 			<p> Area <a href="">#{{libro.area}}</a> </p>
 			<p> Facultad <a style="color:green;" href="">{{libro.get_facultad_display}}</a> </p>
-			<p> Disponible fisico:  <a style="color:red;" href="">{{libro.disponible_fisico}}</a> </p>
 
+			{% if libro.disponible_fisico %}
+
+			<p style="color:red"> Puedes prestar este libro ! </p>
+
+				<a style="background-color:#F25E5C" class="button tiny "  href="{{libro.id}}/prestar">Prestar</a>
+
+
+			{% else %}
+
+			<p style="color:red">Libro no disponible para prestamo, pero puedes descargar una copia. !</p>
 
 			<a style="background-color:#7bac0f" class="button tiny "  href="{{MEDIA_URL}}{{libro.digital_url}}">Descargar</a>
-			<a style="background-color:#F25E5C" class="button tiny "  href="#">Prestar</a>
-		
+
+			{% endif %}
+
+
+
+
+
+
+
 
 
 
 		</div>
-			
+
 	</div>
 </div>
 

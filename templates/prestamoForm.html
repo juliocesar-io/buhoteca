@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+<br>
+   <h4><a href="/">Libros</a> / Prestamos</h4>
+    <div class="large-8 columns">
+        <div class=" panel row">
+
+        <form action='' method='POST'>
+            <div class="row">
+                <div class="  large-3 columns">
+                            {% csrf_token %}
+                            {{ form.non_field_errors }}
+                            <label> Id Lector:
+                            {{ form.id_lector }}
+                            </label>
+                            {% if form.id_lector.errors %}
+
+                              {% for error in form.id_lector.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+                </div>
+                <div class="  large-8 columns">
+                            <label> Nombre lector:
+                            {{ form.nombre_lector }}
+                            </label>
+                            {% if form.nombre_lector.errors %}
+
+                              {% for error in form.nombre_lector.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+
+              </div>
+
+
+
+
+            </div>
+            <br>
+            <div class="row">
+               <div class="large-8 columns">
+                            <label > Libro:
+                             {{ form.libro }}
+                            </label>
+                            {% if form.libro.errors %}
+
+                              {% for error in form.libro.errors %}
+                              <small class="error">
+                                  {{ error|escape }}
+                              </small>
+                              {% endfor %}
+                          {% endif %}
+                   </div>
+
+            </div>
+            <input style="background-color:#7bac0f" class="button tiny " type='submit' value='Prestar'/>
+        </form>
+
+    </div>
+{% endblock %}
