@@ -40,7 +40,7 @@ INSTALLED_APPS = (
     'django_countries',
     'autores',
     'libros',
-    'prestamos',
+    'prestamo',
 )
 
 MIDDLEWARE_CLASSES = (
