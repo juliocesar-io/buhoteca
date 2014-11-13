@@ -6,30 +6,34 @@
     <div class="large-8 columns">
         <div class=" panel row">
 
+               <p style=" color:gray;"> <em> Datos Lector</em></p>
+
         <form action='' method='POST'>
             <div class="row">
-                <div class="  large-3 columns">
+                <div class="  large-4 columns">
                             {% csrf_token %}
                             {{ form.non_field_errors }}
-                            <label> Id Lector:
-                            {{ form.id_lector }}
+                            <label> Usuario:
+                            {{ form.username }}
                             </label>
-                            {% if form.id_lector.errors %}
+                            {% if form.username.errors %}
 
-                              {% for error in form.id_lector.errors %}
+                              {% for error in form.username.errors %}
                               <small class="error">
                                   {{ error|escape }}
                               </small>
                               {% endfor %}
                           {% endif %}
                 </div>
-                <div class="  large-8 columns">
-                            <label> Nombre lector:
-                            {{ form.nombre_lector }}
+            </div>
+            <div class="row">
+              <div class="  large-4 columns">
+                            <label> Contraseña:
+                            {{ form.password }}
                             </label>
-                            {% if form.nombre_lector.errors %}
+                            {% if form.password.errors %}
 
-                              {% for error in form.nombre_lector.errors %}
+                              {% for error in form.password.errors %}
                               <small class="error">
                                   {{ error|escape }}
                               </small>
@@ -38,27 +42,22 @@
 
               </div>
 
-
-
-
             </div>
-            <br>
+
             <div class="row">
-               <div class="large-8 columns">
-                            <label > Libro:
-                             {{ form.libro }}
-                            </label>
-                            {% if form.libro.errors %}
 
-                              {% for error in form.libro.errors %}
-                              <small class="error">
-                                  {{ error|escape }}
-                              </small>
-                              {% endfor %}
-                          {% endif %}
-                   </div>
+              <div class="  large-4 columns">
+                     <p style=" color:gray;"> <em> Resumen prestamos</em></p>
+                <p>Libro : <a href="#">{{libro.titulo}} </a> de {{libro.autor}}</p>
 
+                <img style="width:50%" src="{{MEDIA_URL}}{{libro.cover_url}}">
+
+              </div>
             </div>
+
+            <br>
+
+            <p>Aun no estas registrado ?   <a href=""> Crea una nueva cuenta</a>  </p>
             <input style="background-color:#7bac0f" class="button tiny " type='submit' value='Prestar'/>
         </form>
 

@@ -6,6 +6,7 @@
     <div class="row" data-equalizer>
 
 
+
       <nav id="menu_estanteria">
         <ul>
           <li><strong>Descubre:</strong></li>
@@ -14,28 +15,28 @@
           <li>|</li>
           <li><a href="/autores">Autores</a> </li>
           <li>|</li>
-          <li><a href="">Temas</a> </li> 
+          <li><a href="">Temas</a> </li>
           <li>|</li>
           <li><a href="">Facultades</a></li>
           <li>|</li>
         </ul>
       </nav>
 
-      <div  class=" opciones columns"><h3> Últimos libros</h3> 
+      <div  class=" opciones columns"><h3> Últimos libros</h3>
 
         <div id="opciones-vista">
           <strong>Vista:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Listado</a> | <a href="" onclick="return show('galeria','lista');">Galería</a>
         </div>
-        
+
         <div id="opciones-orden">
-            <strong>Opciones:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Búsqueda</a> | 
-            <a href="#listado" onclick="return show('lista','galeria');">Ordenamiento</a> 
-  
+            <strong>Opciones:</strong>  <a href="#listado" onclick="return show('lista','galeria');">Búsqueda</a> |
+            <a href="#listado" onclick="return show('lista','galeria');">Ordenamiento</a>
+
         </div>
 
-    
+
       </div>
-   
+
       <div id="galeria">
         {% for libro in libros %}
           <div class="large-4 small-6 columns" data-equalizer-watch>
@@ -75,12 +76,12 @@
         <td class="editorial" >{{libro.editorial}}</td>
         <td class="fecha">{{libro.fecha_publicacion}}</td>
 
-  
+
              {% endfor %}
           </tbody>
           </table>
         </div>
-      </div>      
+      </div>
     </div>
   </div>
 {% endblock %}

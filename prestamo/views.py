@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response, get_object_or_404
+from django.shortcuts import render_to_response, get_object_or_404, render
 from django.template import RequestContext
 from django.http import  HttpResponseRedirect
 from django.contrib.auth import login, authenticate
@@ -9,12 +9,12 @@ from prestamo.models import Prestamo
 def nuevo_prestamo(request, id_libro, template='prestamoForm.html'):
 
     libro = get_object_or_404(Libro, pk=id_libro)
-    formulario = AuthenticationForm()
+    form = AuthenticationForm()
 
 
     if request.method == 'POST' :
-        formulario = AuthenticationForm(request.POST)
-        if formulario.is_valid:
+        form = AuthenticationForm(request.POST)
+        if form.is_valid:
             usuario = request.POST ['username']
             clave = request.POST ['password']
             acceso = authenticate(username = usuario, password = clave)
@@ -32,12 +32,12 @@ def nuevo_prestamo(request, id_libro, template='prestamoForm.html'):
                     libro.disponible_fisico = False
                     libro.save()
 
-                    return HttpResponseRedirect('/prestar')
+                    return render( request, 'prestamoExito.html')
                 else :
                     return render_to_response ('noactivo.html', context_instance=RequestContext(request))
             else :
                 return render_to_response ('nousuario.html', context_instance=RequestContext(request))
     else:
-        formulario = AuthenticationForm()
-        return render_to_response('ingresar.html', {'formulario':formulario}, context_instance=RequestContext(request))
+        form = AuthenticationForm()
+        return render_to_response('prestamoForm.html', {'form':form , 'libro': libro}, context_instance=RequestContext(request))
 
