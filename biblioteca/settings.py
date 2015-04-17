@@ -62,10 +62,10 @@ WSGI_APPLICATION = 'biblioteca.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'biblioteca',
-        'USER': 'uzi200',
-        'PASSWORD': '123',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'biblioteca.sql',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'localhost',
         'PORT': '',
     }
@@ -74,7 +74,7 @@ DATABASES = {
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    "/home/django/biblioteca/templates",
+    os.path.join('templates'),
 )
 
 # Internationalization
@@ -97,9 +97,13 @@ GRAPPELLI_ADMIN_TITLE = 'Biblioteca'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-MEDIA_ROOT = '/home/django/biblioteca/biblioteca/media'
+STATICFILES_DIRS = (
+    os.path.join('biblioteca/static'),
+)
 
-STATIC_ROOT = '/home/django/biblioteca/biblioteca/static'
+#MEDIA_ROOT = '/home/django/biblioteca/biblioteca/media'
+
+#STATIC_ROOT = '/home/uzi200/Projects/buhoteca-app/biblioteca/static'
 
 STATIC_URL = '/static/'
 
