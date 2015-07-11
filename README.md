@@ -1,9 +1,11 @@
-#Biblioteca-UCC
+#buhoteca-docs
 _Proyecto final para el curso de base de datos_
 
 A continuación explicare como trabajar con el proyecto si están interesados en replicarlo para trabajar en el, dado el caso podríamos implementarlo en la Universidad.
 
-Documentación oficial del framework utilizado -  Django https://docs.djangoproject.com/en/1.7/
+Documentación oficial del framework utilizado -  [Django docs](https://docs.djangoproject.com/en/1.7/)
+
+Documentación del proyecto - [buhoteca-docs](https://github.com/juliocesar-io/buhoteca-docs)
 
 ### Requerimientos
 * Python/Django
@@ -25,7 +27,7 @@ En el directorio libros se encuentran los modelos donde se definen así:
 
 $  libros/models.py
 
-```
+```py
     class Libro(models.Model):
         titulo = models.CharField(max_length=100)
         autor = models.ForeignKey(Autor)
@@ -45,7 +47,7 @@ Todas las configuraciones  para trabajar con una base de datos en en el proyecto
 
 En el archivo
 $ biblioteca/settings.py
-```
+```py
  DATABASES = {
         'default': {
             'ENGINE':                    'django.db.backends.postgresql_psycopg2',
@@ -63,37 +65,37 @@ $ biblioteca/settings.py
 
 Ingresar al la utilidad de linea de comandos de Posgresql
 
-```
+```bash
 $ sudo -u  postgres psql
 ```
 ó para conectarse a una db con un usuario en particular
 
-```
-psql -d biblioteca_dev -U uzi200
+```bash
+$ psql -d biblioteca_dev -U uzi200
 ```
 
 #### Creación de usuarios
 
-```
+```bash
 postgres-# CREATEUSER $nombre_usuario --pwprompt
 ```
 
 Permisos sobre la base de datos
 
-```
+```bash
 postgres-# ALTER DATABASE $nombre_db OWNER to $nombre_usuario;
 ```
 
 #### Crear una base de datos
 
 
-```
+```bash
 postgres-# CREATE DATABASE $nombre_db
 ```
 
 #### Creación de tablas
 
-```
+```sql
 postgres-# CREATE TABLE autor (
 id int NOT NULL,
 nombre varchar(50) NOT NULL,
@@ -118,7 +120,6 @@ Para el proyecto pueden descargar este [script SQL](https://github.com/uzi200/bi
 - Ver esquema una tabla: ```\d+ $nombre_tabla```
 
 #### Consultas
-```
+```sql
 SELECT $atributo FROM $nombre_tabla WHERE $condición
 ```
-
