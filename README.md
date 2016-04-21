@@ -5,7 +5,7 @@ A continuación explicare como trabajar con el proyecto si están interesados en
 
 Documentación oficial del framework utilizado -  [Django docs](https://docs.djangoproject.com/en/1.7/)
 
-Documentación del proyecto - [buhoteca-docs](https://github.com/juliocesar-io/buhoteca-docs)
+Documentación del proyecto - [buhoteca-docs](http://buhoteca.readthedocs.org)
 
 ### Requerimientos
 * Python/Django
